@@ -1,0 +1,75 @@
+body {
+  margin: 0em;
+  padding: 0em;
+  background-color: darkslategray;
+  font-family: 'Play', sans-serif;
+}
+
+header {
+  margin: 1em;
+}
+
+header #navbar {
+  display: inline;
+  list-style-type: none;
+}
+
+header #navbar li {
+  float: left;
+}
+
+header #navbar li a {
+  display: block;
+  padding: 0em 1em 0em 1em;
+  color: white;
+  text-decoration: none;
+}
+
+header #navbar li a:hover {
+  color:#cccccc
+}
+
+#groupsView {
+  margin: 5em 5em 5em 5em;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". group1 ."
+    ". group2 ."
+    ". group3 .";
+}
+
+.group {
+  margin: 1em;
+  justify-self: center;
+  height: 20em;
+  width: 20em;
+  background-color: #eeeeee;
+  border-radius: 50%;
+
+  color: #ffffff;
+}
+
+#group1 {
+  grid-area: group1;
+}
+
+#group2 {
+  grid-area: group2;
+}
+
+#group3 {
+  grid-area: group3;
+}
+
+@media screen and (min-width: 70em) {
+  #groupsView {
+    grid-template-areas:
+    "group1 . group3"
+    ". group2 .";
+  }
+
+  .group {
+    margin: auto;
+  }
+}
