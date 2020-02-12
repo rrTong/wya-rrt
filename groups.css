@@ -62,6 +62,14 @@ header #navbar li a:hover {
   grid-area: group3;
 }
 
+.person {
+  background-color: #ff9900;
+  width: 5em;
+  height: 5em;
+  margin: auto;
+  text-align: center;
+}
+
 @media screen and (min-width: 70em) {
   #groupsView {
     grid-template-areas:

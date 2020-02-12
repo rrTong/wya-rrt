@@ -7,7 +7,7 @@
   <title>WYA</title>
   <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="groups.css">
-  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.js"></script>
 </head>
 <body>
   <header>
@@ -21,6 +21,9 @@
   <div id="groupsView">
     <div class="group" id="group1">
       SF
+      <div class="person">
+        <!-- Yoki -->
+      </div>
     </div>
     <div class="group" id="group2">
       WFH
@@ -29,6 +32,23 @@
       RTP
     </div>
   </div>
+
+  <script>
+    const container = document.querySelectorAll('#groupsView');
+    const draggable = new Draggable.Draggable(container, {
+      draggable: '.person'
+    })
+
+    draggable.on('drag:start', (e) => console.log(e));
+    draggable.on('drag:move',  (e) => console.log(e));
+    draggable.on('drag:over',  (e) => console.log(e));
+    draggable.on('drag:pressure',  (e) => console.log(e));
+    draggable.on('drag:out',  (e) => console.log(e));
+    draggable.on('drag:stop',  (e) => console.log(e));
+    draggable.on('mirror:created',  (e) => console.log(e));
+    draggable.on('mirror:attached',  (e) => console.log(e));
+    draggable.on('mirror:move',  (e) => console.log(e));
+  </script>
 
 </body>
 </html>
